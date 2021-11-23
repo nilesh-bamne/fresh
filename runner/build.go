@@ -8,9 +8,18 @@ import (
 )
 
 func build() (string, bool) {
-	buildLog("Building...")
+	buildLog("Building Using Make file...")
+	buildCommand("make", "build")
 
-	cmd := exec.Command("go", "build", "-o", buildPath(), root())
+	buildLog("Building...")
+	buildCommand("go", "build")
+
+	return "", true
+}
+
+func buildCommand(command string, args string) (string, bool) {
+
+	cmd := exec.Command(command, args, "-o", buildPath(), root())
 
 	stderr, err := cmd.StderrPipe()
 	if err != nil {

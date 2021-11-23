@@ -1,6 +1,6 @@
 **unmaintained**
 
-# Fresh 
+# Fresh
 
 [![Join the chat at https://gitter.im/pilu/fresh](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/pilu/fresh?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/pilu/fresh.svg?branch=master)](https://travis-ci.org/pilu/fresh)
@@ -13,7 +13,7 @@ It currently works with [Traffic](https://github.com/pilu/traffic), [Martini](ht
 
 ## Installation
 
-    go get github.com/pilu/fresh
+    go get github.com/nilesh-bamne/fresh
 
 ## Usage
 
@@ -26,7 +26,7 @@ Start fresh:
 Fresh will watch for file events, and every time you create/modify/delete a file it will build and restart the application.
 If `go build` returns an error, it will log it in the tmp folder.
 
-[Traffic](https://github.com/pilu/traffic) already has a middleware that shows the content of that file if it is present. This middleware is automatically added if you run a Traffic web app in dev mode with Fresh.
+[Traffic](https://github.com/nilesh-bamne/traffic) already has a middleware that shows the content of that file if it is present. This middleware is automatically added if you run a Traffic web app in dev mode with Fresh.
 Check the `_examples` folder if you want to use it with Martini or Gocraft Web.
 
 `fresh` uses `./runner.conf` for configuration by default, but you may specify an alternative config filepath using `-c`:
@@ -50,14 +50,13 @@ Here is a sample config file with the default settings:
     log_color_watcher: magenta
     log_color_app:
 
-
 ## Author
 
-* [Andrea Franz](http://gravityblast.com)
+- [Andrea Franz](http://gravityblast.com)
 
 ## More
 
-* [Mailing List](https://groups.google.com/d/forum/golang-fresh)
+- [Mailing List](https://groups.google.com/d/forum/golang-fresh)
 
 ## Contributing
 
@@ -66,4 +65,3 @@ Here is a sample config file with the default settings:
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
